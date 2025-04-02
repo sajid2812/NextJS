@@ -1,3 +1,17 @@
+import { useState } from "react";
+
 export default function () {
-  return <div>bad component</div>;
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      hello
+      <button
+        onClick={() => {
+          setCount((c) => c + 1);
+        }}
+      >
+        Click me! ({count})
+      </button>
+    </div>
+  );
 }
