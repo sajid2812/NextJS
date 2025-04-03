@@ -1,7 +1,5 @@
-import { NextResponse } from "next/server";
+import NextAuth from "next-auth";
 
-export function GET() {
-  return NextResponse.json({
-    message: "hello world!",
-  });
-}
+const handler = NextAuth();
+
+export { handler as GET, handler as POST };
